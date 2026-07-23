@@ -1,10 +1,9 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
     public void OnStartGameClicked()
     {
-        SceneManager.LoadScene("Level1_Supermarket");
+        LevelManager.Instance.LoadLevel(1);
     }
 }
