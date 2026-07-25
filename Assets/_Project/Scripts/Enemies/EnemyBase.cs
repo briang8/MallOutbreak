@@ -55,7 +55,8 @@ public class EnemyBase : MonoBehaviour, IDamageable
     {
         Debug.Log(gameObject.name + " defeated");
         OnEnemyDefeated?.Invoke(this);
-        gameObject.SetActive(false); // pooling-friendly: deactivate instead of Destroy, real pooling logic in Phase 13
+        SaveManager.Instance.CurrentSave.playerStats.totalEnemiesDefeated++;
+        gameObject.SetActive(false); 
     }
 
     // exposed so states can read/move this enemy without needing public setters on private fields
