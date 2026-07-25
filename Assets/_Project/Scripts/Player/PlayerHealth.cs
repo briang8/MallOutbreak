@@ -42,7 +42,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         OnPlayerDied?.Invoke();
         SaveManager.Instance.CurrentSave.playerStats.totalDeaths++;
         SaveManager.Instance.Save();
-        LevelManager.Instance.RestartCurrentLevel();
-        Debug.Log("Player has died. Total deaths: " + SaveManager.Instance.CurrentSave.playerStats.totalDeaths);
+      
     }
 }

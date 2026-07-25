@@ -15,6 +15,9 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void SetMusicVolume(float value) { }
+    public void SetSfxVolume(float value) { }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

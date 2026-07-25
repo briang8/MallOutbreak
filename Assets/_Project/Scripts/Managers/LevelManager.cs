@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
+    public static event System.Action OnLevelCompleted;
+
     public int CurrentLevelIndex { get; private set; }
 
     private readonly string[] _levelSceneNames =
@@ -49,6 +51,7 @@ public class LevelManager : MonoBehaviour
     {
         SaveManager.Instance.MarkLevelCompleted(CurrentLevelIndex);
         Debug.Log("Level " + CurrentLevelIndex + " marked completed");
+        OnLevelCompleted?.Invoke();
     }
 
     public void RestartCurrentLevel()
@@ -58,6 +61,11 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            
+            CompleteCurrentLevel();
+        }
     }
+    
 }
