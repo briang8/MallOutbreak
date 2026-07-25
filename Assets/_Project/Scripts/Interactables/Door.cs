@@ -37,5 +37,7 @@ public class Door : MonoBehaviour, IInteractable
         // Color change to indicate door is open; will replace with animation later
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null) sr.color = Color.green;
+
+        AudioManager.Instance.PlayDoorOpen();
     }
 }

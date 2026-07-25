@@ -47,6 +47,8 @@ public class EnemyBase : MonoBehaviour, IDamageable
         {
             Die();
         }
+
+        AudioManager.Instance.PlayEnemyHit();
     }
 
     protected virtual void Die()

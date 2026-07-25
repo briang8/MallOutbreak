@@ -28,6 +28,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         {
             Die();
         }
+
+        AudioManager.Instance.PlayPlayerHit();
     }
 
     public void Heal(int amount)
