@@ -10,6 +10,14 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public static event Action<int, int> OnHealthChanged; // (current, max)
     public static event Action OnPlayerDied;
 
+    public int GetCurrentHealthForTesting() => _currentHealth;
+
+    // Exposes initialization for unit tests
+    public void InitializeForTesting()
+    {
+        _currentHealth = maxHealth;
+    }
+
     private void Awake()
     {
         _currentHealth = maxHealth;
@@ -17,19 +25,28 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public void TakeDamage(int amount)
     {
-        if (_currentHealth <= 0) return; // already dead, ignore further damage
+        if (_currentHealth <= 0) return;
 
         _currentHealth -= amount;
-        _currentHealth = Mathf.Max(_currentHealth, 0);
+         _currentHealth = Mathf.Max(_currentHealth, 0);
 
-        OnHealthChanged?.Invoke(_currentHealth, maxHealth);
+    if (AudioManager.Instance != null) AudioManager.Instance.PlayPlayerHit();
+    OnHealthChanged?.Invoke(_currentHealth, maxHealth);
 
-        if (_currentHealth <= 0)
-        {
-            Die();
-        }
+    if (_currentHealth <= 0)
+    {
+        Die();
+    }
+    }
 
-        AudioManager.Instance.PlayPlayerHit();
+    private void Die()
+    {
+    OnPlayerDied?.Invoke();
+    if (SaveManager.Instance != null)
+    {
+        SaveManager.Instance.CurrentSave.playerStats.totalDeaths++;
+        SaveManager.Instance.Save();
+    }
     }
 
     public void Heal(int amount)
@@ -38,12 +55,4 @@ public class PlayerHealth : MonoBehaviour, IDamageable
             OnHealthChanged?.Invoke(_currentHealth, maxHealth);
          }
 
-
-    private void Die()
-    {
-        OnPlayerDied?.Invoke();
-        SaveManager.Instance.CurrentSave.playerStats.totalDeaths++;
-        SaveManager.Instance.Save();
-      
-    }
 }
