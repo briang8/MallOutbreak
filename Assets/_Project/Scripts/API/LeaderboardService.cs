@@ -13,7 +13,7 @@ public class LeaderboardService : MonoBehaviour
 
     private const string BinId = "6a64d2abda38895dfe8e9791";
     private const string ApiKey = "$2a$10$HuDQEBr8h1k5N7Hd2c.4eufvcb4guT1FI39PvnClRtxwlDaKHP1nO";
-    private const string BaseUrl = "https://api.jsonbin.io/v3/b/6a64d2abda38895dfe8e9791";
+    private const string BaseUrl = "https://api.jsonbin.io/v3/b/";
 
     private void Awake()
     {

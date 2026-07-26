@@ -32,6 +32,13 @@ public class PlayerCombat : MonoBehaviour
     private void Update()
     {
     if (Input.GetKeyDown(KeyCode.Space)) Attack();
+    
+     // temporary test
+    if (Input.GetKeyDown(KeyCode.T))
+    {
+        EnemyBase nearest = NearestEnemyFinder.FindNearest(transform.position, EnemyBase.ActiveEnemies);
+        if (nearest != null) Debug.Log("Nearest enemy: " + nearest.name);
+    }
     }
 
 }

@@ -41,11 +41,13 @@ public class GameStateUI : MonoBehaviour
     private void ShowGameOver()
     {
         gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void ShowLevelComplete()
     {
         levelCompletePanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void OnRestartClicked()

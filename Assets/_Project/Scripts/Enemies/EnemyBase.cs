@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 public class EnemyBase : MonoBehaviour, IDamageable
 {
@@ -13,10 +14,17 @@ public class EnemyBase : MonoBehaviour, IDamageable
     protected Transform playerTarget;
 
     public static event Action<EnemyBase> OnEnemyDefeated;
+    public static readonly List<EnemyBase> ActiveEnemies = new List<EnemyBase>();
 
     protected virtual void Awake()
     {
         currentHealth = maxHealth;
+        ActiveEnemies.Add(this);
+    }
+
+    protected virtual void OnDisable()
+    {
+        ActiveEnemies.Remove(this);
     }
 
     protected virtual void Start()
