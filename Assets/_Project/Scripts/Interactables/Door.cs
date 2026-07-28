@@ -22,7 +22,7 @@ public class Door : MonoBehaviour, IInteractable
     private bool InventoryHasKey()
     {
         
-        PlayerInventory inv = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+        PlayerInventory inv = Object.FindAnyObjectByType<PlayerInventory>();
         return inv != null && inv.HasItem(requiredKeyId);
     }
 

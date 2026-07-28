@@ -11,7 +11,7 @@ public class Chest : MonoBehaviour, IInteractable
         _isOpened = true;
 
         Debug.Log("Chest opened, received: " + itemId);
-        PlayerInventory inv = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+        PlayerInventory inv = Object.FindAnyObjectByType<PlayerInventory>();
         inv?.AddItem(itemId);
 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
