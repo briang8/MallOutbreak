@@ -4,6 +4,7 @@ public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool requiresKey = false;
     [SerializeField] private string requiredKeyId = "";
+    [SerializeField] private bool isLevelExit = false; 
     private bool _isOpen = false;
 
     public void Interact()
@@ -21,8 +22,7 @@ public class Door : MonoBehaviour, IInteractable
 
     private bool InventoryHasKey()
     {
-        
-        PlayerInventory inv = Object.FindAnyObjectByType<PlayerInventory>();
+        PlayerInventory inv = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
         return inv != null && inv.HasItem(requiredKeyId);
     }
 
@@ -30,14 +30,22 @@ public class Door : MonoBehaviour, IInteractable
     {
         _isOpen = true;
         Debug.Log(gameObject.name + " opened");
-        // Placeholder visual feedback for testing; will replace with animation later
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
-        // Color change to indicate door is open; will replace with animation later
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null) sr.color = Color.green;
 
         AudioManager.Instance.PlayDoorOpen();
+
+        if (isLevelExit)
+        {
+            LevelManager.Instance.CompleteCurrentLevel();
+        }
+    }
+
+    public void SetLocked(bool locked)
+    {
+        requiresKey = locked;
     }
 }
