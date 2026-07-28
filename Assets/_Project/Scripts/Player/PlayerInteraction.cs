@@ -22,4 +22,6 @@ public class PlayerInteraction : MonoBehaviour
             interactable?.Interact();
         }
     }
+
+    public void OnInteractButtonPressed() => TryInteract();
 }

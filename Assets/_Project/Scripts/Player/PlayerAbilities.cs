@@ -8,6 +8,9 @@ public class PlayerAbilities : MonoBehaviour
     private float _cooldown1;
     private float _cooldown2;
 
+    public void UseAbility1() => TryUseAbility1();
+    public void UseAbility2() => TryUseAbility2();
+
     private void Update()
     {
         _cooldown1 -= Time.deltaTime;
@@ -34,4 +37,6 @@ public class PlayerAbilities : MonoBehaviour
         a.Activate(gameObject);
         _cooldown2 = a.Cooldown;
     }
+
+
 }

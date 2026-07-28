@@ -15,10 +15,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // basic input for now, New Input System swap comes in Phase 12 (platform input)
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-        _moveInput = new Vector2(x, y).normalized;
+        float x, y;
+        #if UNITY_ANDROID || UNITY_IOS
+            x = MobileInputProvider.Instance != null ? MobileInputProvider.Instance.Horizontal : 0f;
+            y = MobileInputProvider.Instance != null ? MobileInputProvider.Instance.Vertical : 0f;
+        #else
+            x = Input.GetAxisRaw("Horizontal");
+            y = Input.GetAxisRaw("Vertical");
+        #endif
+
+    _moveInput = new Vector2(x, y).normalized;
+    
     }
 
     private void FixedUpdate()

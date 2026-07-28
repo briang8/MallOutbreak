@@ -33,7 +33,14 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic();
+        ApplySavedVolumes();
     }
+    private void ApplySavedVolumes()
+    {
+        if (SaveManager.Instance == null) return;
+        SetMusicVolume(SaveManager.Instance.CurrentSave.settings.musicVolume);
+        SetSfxVolume(SaveManager.Instance.CurrentSave.settings.sfxVolume);
+ }
 
     private void OnEnable()
     {
