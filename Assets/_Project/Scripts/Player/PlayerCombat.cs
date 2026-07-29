@@ -5,12 +5,20 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float attackRange = 1f;
     [SerializeField] private int attackDamage = 10;
     [SerializeField] private LayerMask enemyLayer;
+    protected Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public void Attack()
     {
         // finds anything on the enemy layer within range and damages it
         Debug.Log("Attacking!");
+
         if (animator != null) animator.SetTrigger("AttackTrigger");
+
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
 
         foreach (var hit in hits)

@@ -8,6 +8,7 @@ public class EnemyBase : MonoBehaviour, IDamageable
     [SerializeField] protected float moveSpeed = 2f;
     [SerializeField] protected float detectionRange = 5f;
     [SerializeField] protected float attackRange = 1f;
+    [SerializeField] protected LayerMask obstacleLayer;
 
     protected int currentHealth;
     protected IEnemyState currentState;
@@ -38,6 +39,24 @@ public class EnemyBase : MonoBehaviour, IDamageable
     protected virtual void Update()
     {
         currentState?.Update(this);
+    }
+    
+    
+    public bool IsBlocked(Vector2 targetPosition)
+    {
+        Collider2D hit = Physics2D.OverlapCircle(targetPosition, 0.2f, obstacleLayer);
+        return hit != null;
+    }
+
+    // Flips sprite to face left/right based on horizontal movement direction only.
+    public void FaceDirection(float horizontalDirection)
+    {
+        if (Mathf.Abs(horizontalDirection) > 0.01f)
+        {
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Sign(horizontalDirection) * Mathf.Abs(scale.x);
+        transform.localScale = scale;
+        }
     }
 
     public void ChangeState(IEnemyState newState)
