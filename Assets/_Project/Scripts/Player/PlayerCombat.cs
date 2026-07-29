@@ -10,6 +10,7 @@ public class PlayerCombat : MonoBehaviour
     {
         // finds anything on the enemy layer within range and damages it
         Debug.Log("Attacking!");
+        if (animator != null) animator.SetTrigger("AttackTrigger");
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
 
         foreach (var hit in hits)
