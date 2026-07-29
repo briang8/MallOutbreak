@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class IdleState : IEnemyState
 {
-    public void Enter(EnemyBase enemy) { }
+    public void Enter(EnemyBase enemy)
+     { 
+            Animator anim = enemy.GetComponent<Animator>();
+            if (anim != null) anim.SetFloat("Speed", 0f);
+     }
 
     public void Update(EnemyBase enemy)
     {

@@ -24,6 +24,9 @@ public class ChaseState : IEnemyState
 
         Vector2 direction = (enemy.PlayerTarget.position - enemy.transform.position).normalized;
         enemy.transform.position += (Vector3)direction * enemy.MoveSpeed * Time.deltaTime;
+
+        Animator anim = enemy.GetComponent<Animator>();
+        if (anim != null) anim.SetFloat("Speed", enemy.MoveSpeed);
     }
 
     public void Exit(EnemyBase enemy) { }

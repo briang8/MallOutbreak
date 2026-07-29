@@ -12,6 +12,7 @@ public class EnemyBase : MonoBehaviour, IDamageable
     protected int currentHealth;
     protected IEnemyState currentState;
     protected Transform playerTarget;
+    protected Animator animator;
 
     public static event Action<EnemyBase> OnEnemyDefeated;
     public static readonly List<EnemyBase> ActiveEnemies = new List<EnemyBase>();
@@ -20,6 +21,7 @@ public class EnemyBase : MonoBehaviour, IDamageable
     {
         currentHealth = maxHealth;
         ActiveEnemies.Add(this);
+        animator = GetComponent<Animator>();
     }
 
     protected virtual void OnDisable()
@@ -51,6 +53,8 @@ public class EnemyBase : MonoBehaviour, IDamageable
         currentHealth -= amount;
         Debug.Log(gameObject.name + " took " + amount + " damage, health now: " + currentHealth);
 
+        if (animator != null) animator.SetTrigger("HurtTrigger");
+
         if (currentHealth <= 0)
         {
             Die();
@@ -62,12 +66,17 @@ public class EnemyBase : MonoBehaviour, IDamageable
     protected virtual void Die()
     {
         Debug.Log(gameObject.name + " defeated");
+        if (animator != null) animator.SetBool("IsDead", true);
         OnEnemyDefeated?.Invoke(this);
         SaveManager.Instance.CurrentSave.playerStats.totalEnemiesDefeated++;
-        gameObject.SetActive(false); 
+        Invoke(nameof(DeactivateAfterDeath), 1f);
     }
 
-    // exposed so states can read/move this enemy without needing public setters on private fields
+    private void DeactivateAfterDeath()
+    {
+        gameObject.SetActive(false);
+    }
+
     public Transform PlayerTarget => playerTarget;
     public float MoveSpeed => moveSpeed;
     public float DetectionRange => detectionRange;

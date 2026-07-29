@@ -40,6 +40,7 @@ public class ZombieBrute : EnemyBase, IAttackable
     public void PerformAttack(GameObject target)
     {
         Debug.Log(gameObject.name + " slams " + target.name);
+        if (animator != null) animator.SetTrigger("AttackTrigger");
         IDamageable damageable = target.GetComponent<IDamageable>();
         damageable?.TakeDamage(attackDamage);
     }

@@ -21,6 +21,7 @@ public class ZombieRunner : EnemyBase, IAttackable
     public void PerformAttack(GameObject target)
     {
         Debug.Log(gameObject.name + " lunges at " + target.name);
+        if (animator != null) animator.SetTrigger("AttackTrigger");
         IDamageable damageable = target.GetComponent<IDamageable>();
         damageable?.TakeDamage(attackDamage);
     }
