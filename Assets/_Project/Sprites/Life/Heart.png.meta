@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 586da481933b528499016a6d230fd0d9
+guid: 0ae805eb6ca9e8c4f8ed86658f7e4ac1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6823454388532845222
-    second: player_flamethrower_0
+      213: 4606908045521496030
+    second: Heart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_flamethrower_0
+      name: Heart_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 58
-        height: 57
+        width: 97
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a556b66c2683e41a0800000000000000
-      internalID: -6823454388532845222
+      spriteID: ed7a23e75760fef30800000000000000
+      internalID: 4606908045521496030
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_flamethrower_0: -6823454388532845222
+      Heart_0: 4606908045521496030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,7 +13,7 @@ public class DashAbility : MonoBehaviour, IAbility
         {
             Vector2 dashDirection = rb.linearVelocity.normalized;
             if (dashDirection == Vector2.zero) dashDirection = Vector2.up; // default direction if standing still
-            rb.AddForce(dashDirection * dashForce, ForceMode2D.Impulse);
+            rb.linearVelocity = dashDirection * dashForce;
         }
     }
 }

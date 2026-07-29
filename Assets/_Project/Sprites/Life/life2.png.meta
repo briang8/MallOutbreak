@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: fe6317bb30e60ee4aa8406b004166216
+guid: a01a9cd759b99bc43a7982a88782046a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -18286067910698280
-    second: player_pumgun_reload_strip5_0
-  - first:
-      213: -6867102874422609099
-    second: player_pumgun_reload_strip5_1
-  - first:
-      213: 7111603887573900558
-    second: player_pumgun_reload_strip5_2
-  - first:
-      213: 4158175454242542178
-    second: player_pumgun_reload_strip5_3
-  - first:
-      213: -3116494596200226043
-    second: player_pumgun_reload_strip5_4
+      213: 2683846641007607036
+    second: life2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -138,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_pumgun_reload_strip5_0
+      name: life2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 65
-        height: 57
+        width: 301
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,96 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8da18d90be80fbff0800000000000000
-      internalID: -18286067910698280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_pumgun_reload_strip5_1
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 0
-        width: 45
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53bf9f5b15623b0a0800000000000000
-      internalID: -6867102874422609099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_pumgun_reload_strip5_2
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 0
-        width: 45
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e0d112e8e0e71b260800000000000000
-      internalID: 7111603887573900558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_pumgun_reload_strip5_3
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 0
-        width: 45
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 26210ef6b8ec4b930800000000000000
-      internalID: 4158175454242542178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_pumgun_reload_strip5_4
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 0
-        width: 43
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 503af093dacffb4d0800000000000000
-      internalID: -3116494596200226043
+      spriteID: cfc32e4ec40fe3520800000000000000
+      internalID: 2683846641007607036
       vertices: []
       indices: 
       edges: []
@@ -261,11 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_pumgun_reload_strip5_0: -18286067910698280
-      player_pumgun_reload_strip5_1: -6867102874422609099
-      player_pumgun_reload_strip5_2: 7111603887573900558
-      player_pumgun_reload_strip5_3: 4158175454242542178
-      player_pumgun_reload_strip5_4: -3116494596200226043
+      life2_0: 2683846641007607036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -18,6 +18,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         _currentHealth = maxHealth;
     }
 
+    private void Start()
+    {
+        OnHealthChanged?.Invoke(_currentHealth, maxHealth);
+    }
+
     private void Awake()
     {
         _currentHealth = maxHealth;

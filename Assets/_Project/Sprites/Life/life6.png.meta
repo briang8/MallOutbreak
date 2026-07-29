@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 279159ecfb0265945be4760d5633fc30
+guid: 05b0815f0e27edf4b9955496e8d58f1b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2135432894106770063
-    second: MarketSet_Customer1_0
-  - first:
-      213: 5550486732398356742
-    second: MarketSet_Customer1_1
-  - first:
-      213: -4404058754535102025
-    second: MarketSet_Customer1_2
-  - first:
-      213: -8710360335398389650
-    second: MarketSet_Customer1_3
-  - first:
-      213: 4582611983440822984
-    second: MarketSet_Customer1_4
+      213: -80302212424030865
+    second: life6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -138,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MarketSet_Customer1_0
+      name: life6_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 57
-        height: 32
+        width: 302
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,96 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 175e419c81b6d52e0800000000000000
-      internalID: -2135432894106770063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MarketSet_Customer1_1
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 0
-        width: 9
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6096f1f764a470d40800000000000000
-      internalID: 5550486732398356742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MarketSet_Customer1_2
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 16
-        width: 7
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b96cfd75e3a1e2c0800000000000000
-      internalID: -4404058754535102025
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MarketSet_Customer1_3
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 16
-        width: 8
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e683de6ac659e1780800000000000000
-      internalID: -8710360335398389650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MarketSet_Customer1_4
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 0
-        width: 7
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c24078b155b89f30800000000000000
-      internalID: 4582611983440822984
+      spriteID: f65a9c13095b2eef0800000000000000
+      internalID: -80302212424030865
       vertices: []
       indices: 
       edges: []
@@ -261,11 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MarketSet_Customer1_0: -2135432894106770063
-      MarketSet_Customer1_1: 5550486732398356742
-      MarketSet_Customer1_2: -4404058754535102025
-      MarketSet_Customer1_3: -8710360335398389650
-      MarketSet_Customer1_4: 4582611983440822984
+      life6_0: -80302212424030865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -40,7 +40,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Update()
     {
-    if (Input.GetKeyDown(KeyCode.Space)) Attack();
+    if (Input.GetMouseButtonDown(0)) Attack();
     
      // temporary test
     if (Input.GetKeyDown(KeyCode.T))

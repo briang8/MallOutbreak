@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4779de3d7d2ea346a44ae24083a1eac
+guid: 0cae285d8f5ba6241971e688ad050d2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1147410764350638970
-    second: player_hk_stand_0
+      213: -5232002181052180650
+    second: life3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_hk_stand_0
+      name: life3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 56
-        height: 57
+        width: 301
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 684bb633df39310f0800000000000000
-      internalID: -1147410764350638970
+      spriteID: 657d0569cb13467b0800000000000000
+      internalID: -5232002181052180650
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_hk_stand_0: -1147410764350638970
+      life3_0: -5232002181052180650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

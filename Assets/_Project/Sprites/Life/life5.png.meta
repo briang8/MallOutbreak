@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: be72c11758a11a441a2e7439eaecfa15
+guid: 9e189098d22654e439e4320eed40d61c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4568089603547395371
-    second: player_9mmhandgun_0
+      213: 5274311466488728914
+    second: life5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_9mmhandgun_0
+      name: life5_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 11
-        width: 42
-        height: 35
+        x: 0
+        y: 0
+        width: 301
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5da076655b2ea90c0800000000000000
-      internalID: -4568089603547395371
+      spriteID: 25d84d2955e123940800000000000000
+      internalID: 5274311466488728914
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_9mmhandgun_0: -4568089603547395371
+      life5_0: 5274311466488728914
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
