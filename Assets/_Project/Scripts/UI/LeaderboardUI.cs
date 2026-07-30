@@ -34,9 +34,9 @@ public class LeaderboardUI : MonoBehaviour
 
             var sorted = LeaderboardSorter.SortByScoreDescending(data.entries);
             string display = "";
-            for (int i = 0; i < sorted.Count && i < 10; i++) // top 10 only
+            for (int i = 0; i < sorted.Count && i < 3; i++) // top 3 only
             {
-                display += (i + 1) + ". " + sorted[i].playerName + " — " + sorted[i].enemiesDefeated + " kills\n";
+                display += (i + 1) + ". " + sorted[i].playerName + "-" + sorted[i].enemiesDefeated + " kills\n";
             }
             leaderboardListText.text = display;
         });
