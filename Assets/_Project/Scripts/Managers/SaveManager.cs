@@ -86,4 +86,20 @@ public class SaveManager : MonoBehaviour
     {
         return CurrentSave.levels.Exists(l => l.isCompleted);
     }
+
+    public void ResetProgress()
+    {
+        CurrentSave = CreateNewSaveForReset();
+        Save();
+    }
+
+    private SaveData CreateNewSaveForReset()
+    {
+        SaveData data = new SaveData();
+        for (int i = 1; i <= 5; i++)
+        {
+            data.levels.Add(new LevelProgress { levelIndex = i, isCompleted = false, isUnlocked = (i == 1) });
+        }
+        return data;
+    }
 }

@@ -22,13 +22,18 @@ public class PlayerAbilities : MonoBehaviour
 
     private void TryUseAbility1()
     {
-        if (_cooldown1 > 0f) return;
-        IAbility a = ability1 as IAbility;
-        if (a == null) return;
-        a.Activate(gameObject);
-        _cooldown1 = a.Cooldown;
+    if (_cooldown1 > 0f) return;
+    IAbility a = ability1 as IAbility;
+    if (a == null)
+    {
+        Debug.Log("Ability1 is null or doesn't implement IAbility");
+        return;
     }
-
+    Debug.Log("Calling Activate on ability1");
+    a.Activate(gameObject);
+    _cooldown1 = a.Cooldown;
+    }
+    
     private void TryUseAbility2()
     {
         if (_cooldown2 > 0f) return;

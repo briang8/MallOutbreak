@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuUI : MonoBehaviour
 {
     [SerializeField] private GameObject continueButton;
+    [SerializeField] private GameObject startConfirmPanel;
 
     private void Start()
     {
@@ -17,7 +18,14 @@ public class MainMenuUI : MonoBehaviour
 
     public void OnStartGameClicked()
     {
-        LevelManager.Instance.LoadLevel(1);
+        if (SaveManager.Instance.HasAnyProgress())
+        {
+            startConfirmPanel.SetActive(true);
+        }
+        else
+        {
+            LevelManager.Instance.LoadLevel(1);
+        }
     }
 
     public void OnContinueGameClicked()
