@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Level3_ClothingStore.unity
     guid: a2c506c265f2bb04483bdf7a97fc41b2
   - enabled: 1
-    path: Assets/_Project/Scenes/Level4_ElectonicStore.unity
+    path: Assets/_Project/Scenes/Level4_Electronics.unity
     guid: 2dff65311ec224f4caed5cbb37588da8
   - enabled: 1
     path: Assets/_Project/Scenes/Level5_ParkingRoof.unity
