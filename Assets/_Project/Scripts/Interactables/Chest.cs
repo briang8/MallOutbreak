@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour, IInteractable
 {
+    public static event System.Action OnChestOpened;
+
     [SerializeField] private string itemId = "Supplies";
     
     private bool _isOpened = false;
@@ -27,5 +29,7 @@ public class Chest : MonoBehaviour, IInteractable
         {
             _animator.SetTrigger("OpenTrigger");
         }
+
+        OnChestOpened?.Invoke();
     }
 }
