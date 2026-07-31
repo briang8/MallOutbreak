@@ -1,14 +1,13 @@
 using UnityEngine;
 
-// Hides the entire mobile control scheme on non-touch platforms so
-// desktop/WebGL builds aren't cluttered with on-screen buttons meant
-// only for Android/iOS.
 public class MobileControlsVisibility : MonoBehaviour
 {
-    private void Start()
+    private void Awake()
     {
-        #if !UNITY_ANDROID && !UNITY_IOS
+// Hide if running in the Unity Editor, or if compiling for Standalone/WebGL builds
+
+#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL
         gameObject.SetActive(false);
-        #endif
+#endif
     }
 }
