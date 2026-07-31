@@ -16,7 +16,13 @@ EditorBuildSettings:
     guid: 8add6800f74644245a94d171dd060a84
   - enabled: 1
     path: Assets/_Project/Scenes/Level2_FoodCourt.unity
+    guid: fda4846bad9f05240b6c19f401bb759c
+  - enabled: 1
+    path: Assets/_Project/Scenes/Level3_ClothingStore.unity
     guid: a2c506c265f2bb04483bdf7a97fc41b2
+  - enabled: 1
+    path: Assets/_Project/Scenes/Level4_ElectonicStore.unity
+    guid: ce71c05e64ae4ba43b4fdc0346fb71f1
   - enabled: 1
     path: Assets/_Project/Scenes/LevelSelection.unity
     guid: a9e88757627ae504e88a847e36694478
