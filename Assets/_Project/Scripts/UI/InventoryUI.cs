@@ -4,6 +4,7 @@ using TMPro;
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI inventoryText;
+    [SerializeField] private GameObject inventoryPanel;
 
     private void OnEnable()
     {
@@ -17,6 +18,7 @@ public class InventoryUI : MonoBehaviour
 
     private void OnItemAdded(string itemId)
     {
+        if (inventoryPanel != null) inventoryPanel.SetActive(true);
         inventoryText.text += itemId + "\n";
     }
 }

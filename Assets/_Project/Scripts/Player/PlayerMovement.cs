@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float x, y;
 
-#if UNITY_ANDROID || UNITY_IOS
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
         x = MobileInputProvider.Instance != null ? MobileInputProvider.Instance.Horizontal : 0f;
         y = MobileInputProvider.Instance != null ? MobileInputProvider.Instance.Vertical : 0f;
 #else
