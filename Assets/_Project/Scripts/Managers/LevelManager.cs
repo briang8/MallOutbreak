@@ -59,6 +59,8 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(_levelSceneNames[CurrentLevelIndex]);
     }
 
+    public void LoadNextLevel() => LoadLevel(CurrentLevelIndex + 1);
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))

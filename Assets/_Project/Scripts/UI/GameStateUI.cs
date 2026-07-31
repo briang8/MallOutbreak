@@ -66,4 +66,10 @@ public class GameStateUI : MonoBehaviour
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
+
+    public void OnNextLevelClicked()
+    {
+        Time.timeScale = 1f;
+        LevelManager.Instance.LoadNextLevel();
+    }
 }

@@ -2471,6 +2471,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1425256698}
+    - target: {fileID: 6544662299117071296, guid: ac3d4cf09c4220e4b8a2e8d3e4d87007, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNextLevelClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 6544662299117071296, guid: ac3d4cf09c4220e4b8a2e8d3e4d87007, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameStateUI, MallOutbreak
+      objectReference: {fileID: 0}
     - target: {fileID: 6683545638326880411, guid: ac3d4cf09c4220e4b8a2e8d3e4d87007, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
