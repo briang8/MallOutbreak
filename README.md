@@ -1,6 +1,6 @@
-# Mall Outbreak
+# Mall Breakout
 
-Mall Outbreak is a top-down Unity action game with five playable levels. The player clears zombies, collects level items, opens a chest, and exits to the next stage.
+Mall Breakout is a top-down Unity action game with five playable levels. The player clears zombies, collects level items, opens a chest, and exits to the next stage.
 
 ## Gameplay Loop
 
