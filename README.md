@@ -1,6 +1,10 @@
-# Mall Outbreak
+# Mall Breakout
 
+<<<<<<< HEAD
 A top-down Unity survival game - clear a zombie-infested mall across five levels, built to demonstrate modular, event-driven software architecture as much as gameplay.
+=======
+Mall Breakout is a top-down Unity action game with five playable levels. The player clears zombies, collects level items, opens a chest, and exits to the next stage.
+>>>>>>> b9fab3291d030ffb473014827cd1ae90536ec55a
 
 ## Gameplay Loop
 Enter a level → defeat enemies → collect items → open the chest → exit unlocks → progress to the next level. Progress saves automatically between sessions.
